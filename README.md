@@ -29,7 +29,7 @@ In order to support an update to the [Health Department’s COVID-19 Data webpag
 | tests-by-zcta | data-by-modzcta.csv | Totals/ | 
 | boro/boroughs-case-hosp-death.csv | data-by-day.csv | Trends/ | 
 | boroughs-by-age.csv, boroughs-by-race.csv, boroughs-by-sex.csv | group-data-by-boro.csv, group-case-by-boro.csv, group-hosp-by-boro,csv, group-deaths-by-boro.csv | Totals/ | 
-| deaths/probable-confirmed-dod.csv | data-by-day.csv | Totals/ | 
+| deaths/probable-confirmed-dod.csv | data-by-day.csv | Trends/ | 
 | sydromic_data.csv | covid-like-illness.csv | Trends/ | 
 | recent-4-week-citywide.csv | Similar data available in now-summary.csv | Latest/ | 
 | recent-4-week-by-modzcta.csv | Similar data available in caserate-by-modzcta.csv, testrate-by-modzcta.csv, percentpositive-by-modzcta.csv | Trends/ | 
@@ -77,11 +77,14 @@ The Health Department conducts two main types of surveillance for COVID-19:
 
 We receive data from all 53 hospital emergency departments (EDs) in NYC about the types of illnesses people experience on a regular basis. This surveillance allows the Health Department to evaluate care-seeking trends at hospitals for influenza-like illness and pneumonia.    
 
-The information on each patient is evaluated for descriptions that resemble influenza-like illness or pneumonia. Influenza-like illness is defined as mention of either:   
+The information on each patient is evaluated for descriptions that resemble influenza-like illness or pneumonia, or include the ICD-10-CM code (U07.1) for 2019 novel coronavirus disease. Influenza-like illness is defined as mention of either:
+
 - Fever and cough      
 - Fever and sore throat   
 - Fever and shortness of breath or difficulty breathing 
 - Influenza   
+
+We exclude those who present with influenza-like illness and are subsequently assigned with only an ICD-10-CM code for influenza.
 
 Pneumonia is defined as mention or diagnosis of pneumonia. Since the signs and symptoms of COVID-19 overlap with these categories that the Health Department tracks routinely, we are able to identify unusual spikes in people seeking care at hospitals. We are using this as a proxy measure to observe COVID-19-like disease in the population.   
 
